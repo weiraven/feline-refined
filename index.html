@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feline Refined</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29e7d101cb.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="img/logo_inverted.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Explore</a></li>
+                    <li><a href="">Pursue</a></li>
+                    <li><a href="">Investigate</a></li>
+                    <li><a href="">Our Tail</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+    <div class="text-box">
+        <h1>Love knows no age</h1>
+        <p>Discover the joys and rewards of caring for an adult feline. Here at Feline Refined, <br> we are dedicated to educating and inspiring animal lovers to open their hearts to cats of all ages.</p>
+        <a class="start-btn" href="">Start Your Journey Here</a>
+    </div>
+    </section>
+<script>
+    const navLinks = document.getElementById('navLinks');
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+    
+</script>
+
+</body>
+</html>
