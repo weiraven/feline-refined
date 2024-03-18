@@ -31,4 +31,4 @@ cd feline-refined
 ```
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/weiraven/feline-refined/blob/main/LICENSE).
