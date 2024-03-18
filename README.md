@@ -7,7 +7,6 @@ A mock-up website dedicated to promoting the education and adoption of adult cat
 - [About](#about)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## About
@@ -29,3 +28,6 @@ To get started with Feline Refined, simply clone this repository to your local m
 ```bash
 git clone https://github.com/your-username/feline-refined.git
 cd feline-refined
+
+## License
+This project is licensed under the MIT License.
