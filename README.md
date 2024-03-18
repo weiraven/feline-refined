@@ -28,8 +28,7 @@ To get started with Feline Refined, simply clone this repository to your local m
 ```bash
 git clone https://github.com/your-username/feline-refined.git
 cd feline-refined
-
-`
+```
 
 ## License
 This project is licensed under the MIT License.
