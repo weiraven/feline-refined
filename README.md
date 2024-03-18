@@ -1,4 +1,4 @@
-# feline-refined
+# Feline Refined
 
 A mock-up website dedicated to promoting the education and adoption of adult cats. Our mission is to challenge misconceptions about adult cats and highlight the unique charm, affection, and companionship they offer to humans.
 
