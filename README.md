@@ -26,7 +26,7 @@ Feline Refined aims to create awareness about the benefits of adopting adult cat
 To get started with Feline Refined, simply clone this repository to your local machine and open the `index.html` file in your preferred web browser.
 
 ```bash
-git clone https://github.com/your-username/feline-refined.git
+git clone https://github.com/weiraven/feline-refined.git
 cd feline-refined
 ```
 
