@@ -44,6 +44,8 @@ nav img {
     text-decoration: none;
     font-size: 14px;
     line-height: calc(100% - 4px);
+    z-index: 3;
+    position: relative;
 }
 
 .nav-links ul li::after {
@@ -61,6 +63,7 @@ nav img {
 
 .nav-links ul li:hover::after {
     border-color: #ffffff;
+    cursor: pointer;
 }
 
 .text-box {
