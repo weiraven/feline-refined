@@ -14,42 +14,6 @@
     position: relative;   
 }
 
-.about-header {
-    min-height: 65vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8)), url(../img/cat_highfive.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;   
-}
-
-.work-header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
-    background-position: center;
-    background-size: cover;
-    position: relative;   
-}
-
-.donate-header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
-    background-position: center;
-    background-size: cover;
-    position: relative;   
-}
-
-.volunteer-header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
-    background-position: center;
-    background-size: cover;
-    position: relative;   
-}
-
 nav {
     display: flex;
     padding: 2% 6%;
@@ -535,6 +499,15 @@ footer {
 
 /* About page styling */
 
+.about-header {
+    min-height: 90vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8)), url(../img/cat_highfive.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
 .about-container {
     width: 100%;
     background-color: #fff;
@@ -623,7 +596,7 @@ footer {
 }
 
 .word-row {
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 50px 0;
     display: flex;
@@ -684,4 +657,37 @@ footer {
         flex-basis: 100%;
         margin-bottom: 20px;
     }
+}
+
+/* Our Work page styling */
+
+.work-header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8)), url(../img/cat_finger_hold.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+/* Donate page styling */
+
+.donate-header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+/* Volunteer page styling */
+
+.volunteer-header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
+    background-position: center;
+    background-size: cover;
+    position: relative;   
 }
