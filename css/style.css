@@ -474,7 +474,7 @@ footer {
     display: flex;
     background-color: #292929;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 6%;
 }
 
@@ -499,30 +499,33 @@ footer {
 }
 
 .newsletter {
-    width: 50%;
+    width: 40%;
     font-size: 11px;
 }
 
 .email {
     margin-left: 10px;
-    width: 240px;
+    width: 250px;
+    height: 28px;
 }
 
 .newsletter button {
     margin-left: 10px;
     width: 80px;
+    height: 28px;
+    cursor: pointer;
 }
 
 .social-media {
     width: 20%;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .social-media a i {
     color: #fff;
-    font-size: 24px;
+    font-size: 32px;
     margin-top: 10px;
-    padding: 2px;
+    padding: 3px;
     justify-items: center;
 }
 
