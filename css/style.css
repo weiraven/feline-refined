@@ -533,12 +533,16 @@ footer {
 /* About page styling */
 
 .about-container {
-    width: 80%;
-    margin: auto;
-    padding: 100px 0;
+    width: 100%;
+    background-color: #fff;
+    background-size: cover;
+    position: relative;
 }
 
 .about-row {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -604,6 +608,69 @@ footer {
 
 .quick-links-col ul li a:hover::after{
     width: 100%;
+}
+
+.word-from-ceo {
+    width: 100%;
+    background-image: linear-gradient(rgba(10, 2, 61, 0.6), rgba(53, 18, 106, 0.9));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+}
+
+.word-row {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.word-img-col {
+    flex-basis: 25%;
+    text-align: left;
+}
+
+.word-text-col {
+    flex-basis: 70%;
+    text-align: left;
+}
+
+.word-img-col img {
+    height: 200px;
+    border-radius: 40%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.word-img-col h2 {
+    font-family: "Handlee", cursive;
+    font-size: 42px;
+    color: #fff;
+    text-align: center;
+}
+
+.word-img-col h3 {
+    color: #fff;
+    text-align: center;
+}
+
+.word-text-col p {
+    font-size: 18px;
+}
+
+.word-text-col span.quote {
+    font-size: 2em;
+    font-weight: bold;    
+}
+
+.word-text-col span.end-quote {
+    display: block;
+    text-align: right;
+    font-size: 2em;
+    font-weight: bold;    
+    clear: both;
 }
 
 @media (max-width: 700px) { 
