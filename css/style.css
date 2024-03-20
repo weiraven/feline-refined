@@ -2,12 +2,49 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
 }
 
-.header {
+.home-header {
     min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8)), url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+.about-header {
+    min-height: 65vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8)), url(../img/cat_highfive.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+.work-header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+.donate-header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+.volunteer-header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
     background-position: center;
     background-size: cover;
     position: relative;   
@@ -21,7 +58,7 @@ nav {
 }
 
 nav img {
-    width: 200px;
+    width: 250px;
 }
 
 .nav-links {
@@ -66,6 +103,136 @@ nav img {
     cursor: pointer;
 }
 
+/* Pursue transition to Our Work effect */
+
+.nav-item-explore {
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.nav-item-explore::after {
+    content: "Our Work";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 14px; 
+    z-index: 2; 
+}
+
+.nav-item-explore:hover::after {
+    opacity: 1;
+}
+
+.nav-item-explore:hover {
+    color: transparent; 
+}
+
+/* Pursue transition to Donate effect */
+
+.nav-item-pursue {
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.nav-item-pursue::after {
+    content: "Donate";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 14px; 
+    z-index: 2; 
+}
+
+.nav-item-pursue:hover::after {
+    opacity: 1;
+}
+
+.nav-item-pursue:hover {
+    color: transparent; 
+}
+
+/* Investigate transition to Volunteer effect */
+
+.nav-item-invest {
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.nav-item-invest::after {
+    content: "Volunteer";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 14px; 
+    z-index: 2; 
+}
+
+.nav-item-invest:hover::after {
+    opacity: 1;
+}
+
+.nav-item-invest:hover {
+    color: transparent; 
+}
+
+/* Our Tail transition to About Us effect */
+
+.nav-item-about {
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.nav-item-about::after {
+    content: "About Us";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 14px; 
+    z-index: 2; 
+}
+
+.nav-item-about:hover::after {
+    opacity: 1;
+}
+
+.nav-item-about:hover {
+    color: transparent; 
+}
+
+/* Homepage landing main text box */
+
 .text-box {
     width: 90%;
     color: #fff;
@@ -78,13 +245,15 @@ nav img {
 
 .text-box h1 {
     font-family: "Handlee", cursive;
-    font-size: 72px;
+    font-size: 96px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .text-box p {
-    margin: 10px 0 40px;
-    font: 16px;
+    margin: 0 auto;
+    font-size: 16px;
     color: #fff;
+    max-width: 1000px;
 }
 
 .start-btn {
@@ -93,6 +262,7 @@ nav img {
     color: #fff;
     border: 1px solid #fff;
     padding: 12px 34px;
+    margin-top: 30px;
     font-size: 16px;
     background: transparent;
     position: relative;
@@ -134,7 +304,7 @@ nav .fa {
         display: block;
         color: #fff;
         margin: 10px;
-        font: 20px;
+        font-size: 20px;
         cursor: pointer;
     }
     .nav-links ul {
@@ -168,7 +338,7 @@ h1 {
 
 p {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -190,7 +360,7 @@ p {
     display: flex;
     flex-direction: column;
     background: #c7c7c7;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 0;
     transition: 0.5s;
     overflow: hidden;
@@ -208,7 +378,7 @@ p {
 .news-item p {
     color: #000000;
     text-align: justify;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 22px;
     padding: 0 20px 20px;
@@ -220,7 +390,7 @@ p {
     position: relative;
     padding-top: 100%;
     overflow: hidden;
-    border-radius: 5px 5px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 
 .news-item-img img {
@@ -234,7 +404,7 @@ p {
 
 .news-col:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 @media(max-width: 700px) {
@@ -272,7 +442,7 @@ p {
 
 .community p {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -280,23 +450,25 @@ p {
 }
 
 .community-img {
-    max-width: calc(31% * 3 + 20px * 6);
-    margin-bottom: 30px;
+    display: block;
+    width: 80%;
+    margin: auto;
     position: relative;
-    display: flex;
-    justify-content: space-between;
 }
 
 .community-img img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
+    display: block;
 }
 
 .community-img img:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
+    border-radius: 8px;
 }
+
+/* Footer */
 
 footer {
     display: flex;
@@ -356,4 +528,90 @@ footer {
 
 .social-media a i:hover {
     color: #15e38a;
+}
+
+/* About page styling */
+
+.about-container {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mission-info {
+    flex-basis: 70%;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.quick-links-col {
+    flex-basis: 25%;
+    text-align: left;
+}
+
+.mission-info h1 {
+    font-family: "Open Sans", sans-serif;
+    color: #000000;
+    font-size: 36px;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.mission-info p {
+    color: #000000;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.quick-links-col h2 {
+    font-family: "Handlee", cursive;
+    font-size: 36px;
+    padding: 20px;
+}
+
+.quick-links-col ul {
+    padding: 30px;
+}
+
+.quick-links-col ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+}
+
+.quick-links-col ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.quick-links-col ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #53198e;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+
+.quick-links-col ul li a:hover::after{
+    width: 100%;
+}
+
+@media (max-width: 700px) { 
+    .about-row {
+        flex-direction: column;
+    }
+    .mission-info, .quick-links-col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
 }
