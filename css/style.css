@@ -739,7 +739,7 @@ footer {
 }
 
 .layer:hover {
-    background: rgba(32, 225, 141, 0.5);
+    background: rgba(32, 225, 141, 0.4);
 }
 
 .layer h3 {
@@ -770,14 +770,14 @@ footer {
     }
 }
 
-.work-container {
+.help-container {
     width: 100%;
     background-color: #fff;
     background-size: cover;
     position: relative;
 }
 
-.work-row {
+.help-row {
     width: 80%;
     margin: auto;
     padding: 100px 0;
@@ -785,13 +785,13 @@ footer {
     justify-content: space-between;
 }
 
-.work-info-col {
+.help-info-col {
     flex-basis: 65%;
     text-align: left;
     padding-right: 20px;
 }
 
-.work-info-col h1 {
+.help-info-col h1 {
     font-family: "Open Sans", sans-serif;
     color: #000000;
     font-size: 36px;
@@ -799,18 +799,18 @@ footer {
     padding-bottom: 20px;
 }
 
-.work-info-col p {
+.help-info-col p {
     color: #000000;
     font-size: 16px;
     line-height: 22px;
     margin: 0;
 }
 
-.work-img-col {
+.help-img-col {
     flex-basis: 25%;
 }
 
-.work-img-col img {
+.help-img-col img {
     height: 220px;
     border-radius: 8px;
     margin-left: 10px;
@@ -826,6 +826,177 @@ footer {
     background-position: center;
     background-size: cover;
     position: relative;   
+}
+
+.donation-container {
+    width: 100%;
+    background-color: #fff;
+    background-size: cover;
+    position: relative;
+}
+
+.donation-row {
+    width: 90%;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.donation-info-col {
+    flex-basis: 75%;
+    text-align: left;
+}
+
+.donation-form-col h1 {
+    font-family: "Open Sans", sans-serif;
+    color: #000000;
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.donation-form-col h3 {
+    font-family:  "Handlee", cursive;
+    color: #150036;
+    font-size: 22px;
+    line-height: 54px;
+    margin-top: 10px;
+}
+
+.gift-btn {
+    display: inline-block;
+    color: #53198e;
+    border: 1px solid #53198e;
+    padding: 10px 38px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.gift-btn:hover {
+    color: #ffffff;
+    border: 1px solid #53198e;
+    background: #53198e;
+}
+
+#customAmount {
+    display: inline-block;
+    border: 1px solid #53198e;
+    padding: 10px;
+    font-size: 16px;
+    cursor: text;
+    border-radius: 8px;
+    width: calc(84px + 28px);
+    text-align: center;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box .details {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-row .input-box {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.input-row .input-box:last-child {
+    margin-right: 0; 
+}
+
+.input-box input[type="text"],
+.input-box input[type="number"],
+.input-box select {
+    width: 300px; 
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.expiration-date input[type="text"],
+.expiration-date input[type="number"],
+.expiration-date select {
+    width: 80px; 
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.expiration-date .exp-input:last-child {
+    margin-right: 0;
+}
+
+.caption {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.payment-info {
+    margin-top: 15px;
+}
+
+.payment-type label {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.fa-brands {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+.donation-submit {
+    margin-top: 10px;
+}
+
+.donation-submit input[type="submit"] {
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(#71e6bd, #892ae8);
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.donation-submit input[type="submit"]:hover {
+    background: linear-gradient(#892ae8, #71e6bd);
+}
+
+.donation-img-col {
+    flex-basis: 20%;
+    padding-left: 100px;
+}
+
+.donation-img-col img {
+    width: 300px;
+    border-radius: 8px;
+    margin-top: 75px;
+    margin-bottom: 20px;
 }
 
 /* Volunteer page styling */
