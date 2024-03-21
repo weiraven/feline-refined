@@ -532,6 +532,8 @@ footer {
 .quick-links-col {
     flex-basis: 25%;
     text-align: left;
+    background-color: #ccffe9;
+
 }
 
 .mission-info h1 {
@@ -662,7 +664,7 @@ footer {
 /* Our Work page styling */
 
 .work-header {
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
     background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8)), url(../img/cat_finger_hold.jpg);
     background-position: center;
@@ -670,12 +672,157 @@ footer {
     position: relative;   
 }
 
+.actions-container {
+    width: 100%;
+    background-image: linear-gradient(rgba(10, 2, 61, 0.9), rgba(53, 18, 106, 0.5));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+}
+
+.actions {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.actions h1 {
+    font-family: "Handlee", cursive;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.actions p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.actions-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.actions-col {
+    display: block;
+    flex-basis: 30%;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    height: 300px;
+}
+
+.actions-col img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(32, 225, 141, 0.5);
+}
+
+.layer h3 {
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px #1c1c1c;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+@media(max-width: 700px) {
+    .actions-row {
+        flex-direction: column;
+    }
+    .actions-col {
+        flex-basis: 100%;
+    }
+}
+
+.work-container {
+    width: 100%;
+    background-color: #fff;
+    background-size: cover;
+    position: relative;
+}
+
+.work-row {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-info-col {
+    flex-basis: 65%;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.work-info-col h1 {
+    font-family: "Open Sans", sans-serif;
+    color: #000000;
+    font-size: 36px;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.work-info-col p {
+    color: #000000;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.work-img-col {
+    flex-basis: 25%;
+}
+
+.work-img-col img {
+    height: 220px;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
 /* Donate page styling */
 
 .donate-header {
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
-    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8)), url(../img/cat_handhold.jpg);
     background-position: center;
     background-size: cover;
     position: relative;   
@@ -684,9 +831,9 @@ footer {
 /* Volunteer page styling */
 
 .volunteer-header {
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
-    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8));
+    background-image: linear-gradient(rgba(25, 21, 72, 0.3), rgba(25, 21, 72, 0.8)), url(../img/handful_of_cats.jpg);
     background-position: center;
     background-size: cover;
     position: relative;   
