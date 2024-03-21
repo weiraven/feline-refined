@@ -28,10 +28,210 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="text-box">
-            <h1>Leave a mark</h1>
+            <h1>Leave your mark</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima porro consectetur? Nostrum facere eos, laborum magni reiciendis nulla natus exercitationem quisquam ut explicabo iure earum aliquam id neque quibusdam!</p>
         </div>
 
+    </section>
+
+    <section class="donation-container">
+        <div class="donation-row">
+            <div class="donation-form-col">
+                <h1>Make a difference</h1>
+                <form action="#">
+                    <div class="donation-selection">
+                        <h3>Select Your Gift Amount</h3>
+                        <div class="donation-buttons">
+                            <button class="gift-btn" data-amount="10">$10</button>
+                            <button class="gift-btn" data-amount="20">$20</button>
+                            <button class="gift-btn" data-amount="30">$30</button>
+                            <button class="gift-btn" data-amount="50">$50</button>
+                            <button class="gift-btn" data-amount="100">$100</button>
+                            <input type="number" id="customAmount" name="customAmount" placeholder="$ Other" min="1">
+                        </div>
+                    </div>
+                    <div class="donor-details">
+                        <h3>Your Information</h3>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <span class="details">Full Name</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Email Address</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <span class="details">Mailing Address</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Apartment, Suite or Other</span>
+                                <input type="text" class="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <span class="details">City</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">State</span>
+                                <select name="state" id="state" required>
+                                    <option value="">Select a State</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <span class="details">Zip Code</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-box">
+                                <span class="details">Mobile Number (Optional)</span>
+                                <input type="text" class="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <caption>By providing your mobile number, you agree to receive autodialed, recurring text messages from the Feline Refined with updates and ways you can help. Msg & data rates may apply. Text STOP to opt out, HELP for info. <a href="">Privacy Policy</a>. <a href="">Terms & Conditions</a>.</caption>
+                        </div>
+                        <div class="input-box">
+                            <label for="email-updates">
+                                <input type="checkbox" id="agree" name="agree" checked>
+                                Send me email updates and actions I can take to help protect adult cats.
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <label for="add-gift">
+                                <input type="checkbox" id="agree" name="agree" checked>
+                                Add my gift to the <a href="">Pause for Paws Fund</a>.
+                            </label>
+                        </div>
+                        <h3>Payment Information <i class="fa-solid fa-lock"></i> </h3>
+                        <div class="payment-type">
+                            <label for="credit">
+                                <input type="radio" name="paymentType" value="credit" id="credit"/> Credit
+                            </label>
+                            <label for="bank">
+                                <input type="radio" name="paymentType" value="bank" id="bank"/> Bank Account
+                            </label>
+                            <label for="paypal">
+                                <input type="radio" name="paymentType" value="paypal" id="paypal"/> PayPal
+                            </label>
+                        </div>
+                        <div class="payment-type">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            <i class="fa-brands fa-cc-discover"></i>
+                            <i class="fa-brands fa-cc-amex"></i>
+                            <i class="fa-brands fa-cc-paypal"></i>
+                        </div>
+                        <div id="credit-info" class="payment-info" style="display:none;">
+                            <!-- Credit card information fields -->
+                            <div class="input-box">
+                                <span class="details">Credit Card Number</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                            <div class="input-box expiration-date">
+                                <span class="details">Expiration Date</span>
+                                <input type="number" id="expMonth" name="expMonth" min="1" max="12" value="1" required>
+                                <input type="number" id="expYear" name="expYear" min="2024" max="2099" value="2024" required>
+                                <span class="details">CSV</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                        </div>
+                        <div id="bank-info" class="payment-info" style="display:none;">
+                            <!-- Bank account information fields -->
+                            <div class="input-box">
+                                <span class="details">Account Type</span>
+                                <select name="accountType" id="bank-info" required>
+                                    <option value="checking">Checking</option>
+                                    <option value="savings">Savings</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Bank Account Number</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Bank Routing Number</span>
+                                <input type="text" class="text" placeholder="" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Phone Number</span>
+                                <input type="text" class="text" placeholder="for bank verification" required>
+                            </div>
+                        </div>
+                        <div id="paypal-info" class="payment-info" style="display:none;">
+                            <!-- PayPal information fields -->
+                            <label for="cover-paypal-fee">
+                                <input type="checkbox" id="cover-fee" name="cover-fee">
+                                Help more felines by adding $1.20 to my gift to cover transaction fees.
+                            </label>
+                        </div>
+                        <div class="donation-submit">
+                            <input type="submit" value="Donate">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="donation-img-col">
+                <img src="img/please_cat.jpg" alt="Cat standing and praying">
+            </div>          
     </section>
 
 
@@ -70,7 +270,31 @@
     function hideMenu() {
         navLinks.style.right = "-200px";
     }
-    
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var radios = document.querySelectorAll('input[name="paymentType"]');
+    var creditInfo = document.getElementById('credit-info');
+    var bankInfo = document.getElementById('bank-info');
+    var paypalInfo = document.getElementById('paypal-info');
+
+    radios.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            // Hide all payment info sections
+            creditInfo.style.display = 'none';
+            bankInfo.style.display = 'none';
+            paypalInfo.style.display = 'none';
+            
+            // Show the selected payment method's info section
+            if (this.value === 'credit') {
+                creditInfo.style.display = 'block';
+            } else if (this.value === 'bank') {
+                bankInfo.style.display = 'block';
+            } else if (this.value === 'paypal') {
+                paypalInfo.style.display = 'block';
+            }
+        });
+    });
+    });
 </script>
 
 </body>
