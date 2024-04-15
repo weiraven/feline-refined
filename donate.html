@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/29e7d101cb.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js" defer></script>
     
 </head>
-<body>
+<body class="donate-page">
     <section class="donate-header">
         <nav>
             <a href="index.html"><img src="img/logo.png" alt=""></a>
@@ -262,42 +263,6 @@
             <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
         </section>
     </footer>
-<script>
-    const navLinks = document.getElementById('navLinks');
-
-    function showMenu() {
-        navLinks.style.right = "0";
-    }
-
-    function hideMenu() {
-        navLinks.style.right = "-200px";
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-    var radios = document.querySelectorAll('input[name="paymentType"]');
-    var creditInfo = document.getElementById('credit-info');
-    var bankInfo = document.getElementById('bank-info');
-    var paypalInfo = document.getElementById('paypal-info');
-
-    radios.forEach(function(radio) {
-        radio.addEventListener('change', function() {
-            // Hide all payment info sections
-            creditInfo.style.display = 'none';
-            bankInfo.style.display = 'none';
-            paypalInfo.style.display = 'none';
-            
-            // Show the selected payment method's info section
-            if (this.value === 'credit') {
-                creditInfo.style.display = 'block';
-            } else if (this.value === 'bank') {
-                bankInfo.style.display = 'block';
-            } else if (this.value === 'paypal') {
-                paypalInfo.style.display = 'block';
-            }
-        });
-    });
-    });
-</script>
 
 </body>
 </html>
