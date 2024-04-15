@@ -19,10 +19,10 @@
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="our-work.html" class="nav-item-explore" alt="Explore">Explore</a></li>
-                    <li><a href="donate.html" class="nav-item-pursue" alt="Pursue">Pursue</a></li>
-                    <li><a href="volunteer.html" class="nav-item-invest" alt="Investigate">Investigate</a></li>
-                    <li><a href="about.html" class="nav-item-about" alt="Our Tail">Our Tail</a></li>
+                    <li><a href="our-work.html" class="nav-item-explore">Explore</a></li>
+                    <li><a href="donate.html" class="nav-item-pursue">Pursue</a></li>
+                    <li><a href="volunteer.html" class="nav-item-invest">Investigate</a></li>
+                    <li><a href="about.html" class="nav-item-about">Our Tail</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -147,17 +147,17 @@
                             </div>
                         </div>
                         <div class="caption">
-                            <caption>By providing your mobile number, you agree to receive autodialed, recurring text messages from the Feline Refined with updates and ways you can help. Msg & data rates may apply. Text STOP to opt out, HELP for info. <a href="">Privacy Policy</a>. <a href="">Terms & Conditions</a>.</caption>
+                            By providing your mobile number, you agree to receive autodialed, recurring text messages from the Feline Refined with updates and ways you can help. Msg & data rates may apply. Text STOP to opt out, HELP for info. <a href="">Privacy Policy</a>. <a href="">Terms & Conditions</a>.
                         </div>
                         <div class="input-box">
                             <label for="email-updates">
-                                <input type="checkbox" id="agree" name="agree" checked>
+                                <input type="checkbox" id="email-updates" name="email_agree" checked>
                                 Send me email updates and actions I can take to help protect adult cats.
                             </label>
                         </div>
                         <div class="input-box">
                             <label for="add-gift">
-                                <input type="checkbox" id="agree" name="agree" checked>
+                                <input type="checkbox" id="add-gift" name="gift_agree" checked>
                                 Add my gift to the <a href="">Pause for Paws Fund</a>.
                             </label>
                         </div>
@@ -198,7 +198,8 @@
                             <!-- Bank account information fields -->
                             <div class="input-box">
                                 <span class="details">Account Type</span>
-                                <select name="accountType" id="bank-info" required>
+                                <select name="accountType" id="account-type" required>
+                                    <option value="" disabled selected>Select your account type</option>
                                     <option value="checking">Checking</option>
                                     <option value="savings">Savings</option>
                                 </select>
@@ -219,7 +220,7 @@
                         <div id="paypal-info" class="payment-info" style="display:none;">
                             <!-- PayPal information fields -->
                             <label for="cover-paypal-fee">
-                                <input type="checkbox" id="cover-fee" name="cover-fee">
+                                <input type="checkbox" id="cover-paypal-fee" name="cover-fee">
                                 Help more felines by adding $1.20 to my gift to cover transaction fees.
                             </label>
                         </div>
@@ -231,7 +232,8 @@
             </div>
             <div class="donation-img-col">
                 <img src="img/please_cat.jpg" alt="Cat standing and praying">
-            </div>          
+            </div>
+        </div>        
     </section>
 
 
@@ -246,7 +248,7 @@
         <section class="newsletter">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ipsam id commodi deserunt. Quis aliquid quia veniam laborum eveniet aspernatur?</p>
             <p>Join our newsletter!</p>
-            <form action="">
+            <form action="#">
                 <input type="email" id="email" class="email" placeholder="Enter your email">
                 <button type="submit">Subscribe</button>
             </form>
