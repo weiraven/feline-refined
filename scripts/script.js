@@ -32,59 +32,61 @@ function initializeCarousel() {
     const carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
     const navContainer = document.querySelector('.carousel-nav');
     const navItems = Array.from(document.querySelectorAll('.carousel-nav-item'));
-    let currentIndex = 0; // Start with the first item active
+    let currentIndex = 0;
 
-    function setActiveNav() {
-        carouselItems.forEach((item, index) => {
-            if (item.classList.contains('active')) {
-                navItems[index].classList.add('active');
-            } else {
-                navItems[index].classList.remove('active');
-            }
-        });
+    carouselItems[currentIndex].classList.add('active');
+    navItems[currentIndex].classList.add('active');
+
+    const cycleDelay = 8000;
+
+    function setActiveNavItem() {
+        navItems.forEach(item => item.classList.remove('active'));
+        navItems[currentIndex].classList.add('active');
     }
-
-    carouselItems[currentIndex].classList.add('active'); // Initially set the first item as active
-    const cycleDelay = 5000; // Auto-cycle delay
 
     function moveToSlide(targetIndex) {
         const outgoingSlide = carouselItems[currentIndex];
         const incomingSlide = carouselItems[targetIndex];
-
+    
+        let isForward = currentIndex < targetIndex || (currentIndex === carouselItems.length - 1 && targetIndex === 0);
+        outgoingSlide.style.zIndex = '0'; // Outgoing slides go behind
+        incomingSlide.style.zIndex = '1'; // Incoming slides stay in front
+    
+        if (currentIndex === carouselItems.length - 1 && targetIndex === 0) {
+            // Moving forward from last to first
+            outgoingSlide.style.transform = 'translateX(-100%)';
+            incomingSlide.style.transform = 'translateX(100%)';
+        } else if (currentIndex === 0 && targetIndex === carouselItems.length - 1) {
+            // Moving backward from first to last
+            outgoingSlide.style.transform = 'translateX(100%)';
+            incomingSlide.style.transform = 'translateX(-100%)';
+        } else {
+            // Normal transition setup
+            incomingSlide.style.transform = `translateX(${isForward ? '100%' : '-100%'})`;
+            outgoingSlide.style.transform = `translateX(${isForward ? '-100%' : '100%'})`;
+        }
+    
         incomingSlide.classList.add('active');
-        incomingSlide.style.transform = 'translateX(100%)'; // Start incoming from the right
-
+    
         requestAnimationFrame(() => {
-            outgoingSlide.style.transform = 'translateX(-100%)'; // Move outgoing to the left
-            incomingSlide.style.transform = 'translateX(0%)'; // Slide incoming to center
-
+            incomingSlide.style.transform = 'translateX(0%)';
+    
             setTimeout(() => {
                 outgoingSlide.classList.remove('active');
-                outgoingSlide.style.transform = ''; // Reset transform for reusability
-                currentIndex = targetIndex; // Update current index
-            }, 500); // Transition time
+                outgoingSlide.style.transform = '';
+                currentIndex = targetIndex;
+                setActiveNavItem();
+            }, 500);
         });
-    }
-
-    document.querySelector('.carousel-btn.right').addEventListener('click', () => {
-        // Logic to shift active class among carousel items
-        let activeIndex = [...carouselItems].findIndex(item => item.classList.contains('active'));
-        let nextIndex = (activeIndex + 1) % carouselItems.length;
-        carouselItems[activeIndex].classList.remove('active');
-        carouselItems[nextIndex].classList.add('active');
-        setActiveNav();
+    }    
+       
+    document.querySelectorAll('.carousel-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const offset = button.classList.contains('right') ? 1 : -1;
+            const nextIndex = (currentIndex + offset + carouselItems.length) % carouselItems.length;
+            moveToSlide(nextIndex);
+        });
     });
-
-    document.querySelector('.carousel-btn.left').addEventListener('click', () => {
-        // Logic to shift active class among carousel items
-        let activeIndex = [...carouselItems].findIndex(item => item.classList.contains('active'));
-        let prevIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
-        carouselItems[activeIndex].classList.remove('active');
-        carouselItems[prevIndex].classList.add('active');
-        setActiveNav();
-    });
-
-    setActiveNav();
 
     navContainer.addEventListener('click', (event) => {
         const targetDot = event.target;

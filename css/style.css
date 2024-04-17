@@ -1011,8 +1011,9 @@ footer {
 }
 
 .carousel-container {
+    margin: 20px 0px;
     width: 100%;
-    height: 1000px;
+    height: 700px;
     overflow: hidden;
     position: relative;
 }
@@ -1024,21 +1025,33 @@ footer {
     height: 100%;
 }
 
+.carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(4, 9, 84, 0.4) 0%, rgba(200, 137, 73, 0.1) 50%, rgba(42, 0, 105, 0.8) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
 .carousel-item {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease-in-out;
-    transform: translateX(100%); /* Keep all non-active slides to the right initially */
+    transform: translateX(100%);
 }
 
 .carousel-item.active {
-    transform: translateX(0%); /* Slide in view */
+    transform: translateX(0%);
 }
 
 .carousel-item.left-exit {
-    transform: translateX(-200%); /* Move the slide out of view to the left */
+    transform: translateX(-200%);
 }
 
 .carousel-item.right-exit {
@@ -1055,7 +1068,7 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: 3;
     background: transparent;
     color: white;
     border: none;
@@ -1077,18 +1090,11 @@ footer {
 }
 
 .carousel-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 0.7rem;
-    gap: 0.5rem;
-}
-
-.carousel-nav {
     position: absolute;
     bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
     display: flex;
     gap: 9px;
 }
@@ -1097,6 +1103,7 @@ footer {
     width: 25px;
     height: 5px;
     background-color: #a9a9a9;
+    z-index: 3;
     cursor: pointer;
 }
 
