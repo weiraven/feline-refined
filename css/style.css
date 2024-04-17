@@ -1011,48 +1011,30 @@ footer {
 }
 
 .carousel-container {
-    width: 80%;
-    margin: 0 auto;
-
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
     position: relative;
 }
 
 .carousel {
     list-style-type: none;
-    width: 100%;
-    height: 600px;
-
-    position: relative;
-}
-
-
-To create a sliding effect instead of a fade effect for the carousel, you'll need to adjust the CSS and modify how the JavaScript manages the transitions. Instead of changing the opacity of the carousel items, you'll animate their positions.
-
-Here’s a step-by-step guide on how to change your carousel to use a sliding transition:
-
-CSS Adjustments
-First, modify your CSS to set up a horizontal layout for the slides, and use transitions to animate the transform property, which moves slides in and out of view.
-
-css
-Copy code
-.carousel {
-    list-style-type: none;
-    overflow: hidden; /* Hide anything outside the carousel container */
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 100%;
 }
 
 .carousel-item {
-    position: absolute; /* Make slides stack on top of each other */
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-in-out; /* Animate the transform property */
-    left: 100%; /* Start by positioning slides to the right */
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%); /* Keep all non-active slides to the right initially */
 }
 
 .carousel-item.active {
-    transform: translateX(-100%); /* Move the active slide into view */
+    transform: translateX(0%); /* Slide in view */
 }
 
 .carousel-item.left-exit {
@@ -1063,39 +1045,34 @@ Copy code
     transform: translateX(0%);
 }
 
-.carousel-item > img {
-    display: block;
+.carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
 .carousel-btn {
-    background: transparent;
-    border: none;
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: #046A38;
     position: absolute;
     top: 50%;
-
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 3rem;
 }
 
 .carousel-btn.left {
-    left: -2.5rem;
+    left: 5rem;
 }
 
 .carousel-btn.right {
-    right: -2.5rem;
+    right: 5rem;
 }
 
 .carousel-btn:hover {
     cursor: pointer;
-    background-color: #046A38;
     color: white;
 }
 
@@ -1106,15 +1083,23 @@ Copy code
     gap: 0.5rem;
 }
 
+.carousel-nav {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 9px;
+}
+
 .carousel-nav-item {
-    height: 11px;
-    width: 11px;
-    background-color: black;
-    border-radius: 50%;
-    opacity: 0.3;
-    transition: 300ms opacity ease-in-out;
+    width: 25px;
+    height: 5px;
+    background-color: #a9a9a9;
+    cursor: pointer;
 }
 
 .carousel-nav-item.active {
-    opacity: 0.7;
+    background-color: #ffffff;
 }
