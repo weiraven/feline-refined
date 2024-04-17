@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/29e7d101cb.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js" defer></script>
     
 </head>
 <body>
@@ -34,6 +35,40 @@
         </div>
     </section>
 
+    <section class="volunteer-carousel">
+        <div class="carousel-container">
+            <button class="carousel-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+            <ul class="carousel">
+                <li class="carousel-item active">
+                    <img src="img/volunteer/female-volunteer-cat.jpg" alt="Female volunteer with cat">
+                </li>
+                <li class="carousel-item">
+                    <img src="img/volunteer/blind-cat.jpg" alt="Rescued cat">
+                </li>
+                <li class="carousel-item">
+                    <img src="img/volunteer/headrest.jpg" alt="Loving headbutt">
+                </li>
+                <li class="carousel-item">
+                    <img src="img/volunteer/firefighter_cat.jpg" alt="Firefighter with cat">
+                </li>
+                <li class="carousel-item">
+                    <img src="img/volunteer/prettybrowncat.jpg" alt="Brown cat">
+                </li>
+                <li class="carousel-item">
+                    <img src="img/volunteer/kitty_stare.jpg" alt="Cat in a kennel">
+                </li>
+            </ul>
+            <button class="carousel-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-nav">
+                <div class="carousel-nav-item active"></div>
+                <div class="carousel-nav-item"></div>
+                <div class="carousel-nav-item"></div>
+                <div class="carousel-nav-item"></div>
+                <div class="carousel-nav-item"></div>
+                <div class="carousel-nav-item"></div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <section class="legal-info">
@@ -60,18 +95,6 @@
             <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
         </section>
     </footer>
-<script>
-    const navLinks = document.getElementById('navLinks');
-
-    function showMenu() {
-        navLinks.style.right = "0";
-    }
-
-    function hideMenu() {
-        navLinks.style.right = "-200px";
-    }
-    
-</script>
 
 </body>
 </html>
