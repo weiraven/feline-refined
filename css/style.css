@@ -1009,3 +1009,112 @@ footer {
     background-size: cover;
     position: relative;   
 }
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.carousel {
+    list-style-type: none;
+    width: 100%;
+    height: 600px;
+
+    position: relative;
+}
+
+
+To create a sliding effect instead of a fade effect for the carousel, you'll need to adjust the CSS and modify how the JavaScript manages the transitions. Instead of changing the opacity of the carousel items, you'll animate their positions.
+
+Here’s a step-by-step guide on how to change your carousel to use a sliding transition:
+
+CSS Adjustments
+First, modify your CSS to set up a horizontal layout for the slides, and use transitions to animate the transform property, which moves slides in and out of view.
+
+css
+Copy code
+.carousel {
+    list-style-type: none;
+    overflow: hidden; /* Hide anything outside the carousel container */
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.carousel-item {
+    position: absolute; /* Make slides stack on top of each other */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* Animate the transform property */
+    left: 100%; /* Start by positioning slides to the right */
+}
+
+.carousel-item.active {
+    transform: translateX(-100%); /* Move the active slide into view */
+}
+
+.carousel-item.left-exit {
+    transform: translateX(-200%); /* Move the slide out of view to the left */
+}
+
+.carousel-item.right-exit {
+    transform: translateX(0%);
+}
+
+.carousel-item > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #046A38;
+    position: absolute;
+    top: 50%;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.carousel-btn.left {
+    left: -2.5rem;
+}
+
+.carousel-btn.right {
+    right: -2.5rem;
+}
+
+.carousel-btn:hover {
+    cursor: pointer;
+    background-color: #046A38;
+    color: white;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7rem;
+    gap: 0.5rem;
+}
+
+.carousel-nav-item {
+    height: 11px;
+    width: 11px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: 300ms opacity ease-in-out;
+}
+
+.carousel-nav-item.active {
+    opacity: 0.7;
+}
