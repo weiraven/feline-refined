@@ -381,6 +381,63 @@ p {
     }
 }
 
+.cataas-container {
+    width: 100%;
+    background-image: linear-gradient(rgba(30, 22, 50, 0.8), rgba(45, 30, 98, 0.3)), url(../img/high-pile-texture-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding: 100px;
+}
+
+.random-cat p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.random-cat img {
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+.cat-tag {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-cats-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.more-cats-btn:hover {
+    border: 1px solid #53198e;
+    background: #53198e;
+}
+
 .community-container {
     width: 100%;
     background-image: linear-gradient(rgba(59, 59, 59, 0.9), rgba(180, 190, 253, 0.4)), url(../img/bedroom-bg.jpg);

@@ -27,6 +27,54 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Random cat pictures from Cataas API
+document.addEventListener('DOMContentLoaded', function() {
+    const catImageElement = document.getElementById('randomCatImage');
+    const catTagElement = document.getElementById('catTag');
+    const moreCatsButton = document.querySelector('.more-cats-btn');
+    let tags = []; 
+
+    // Fetch all tags from Cataas API
+    function fetchTags() {
+        fetch('https://cataas.com/api/tags')
+            .then(response => response.json())
+            .then(data => {
+                tags = data;
+                loadRandomCat(); // Load a cat image once tags are available
+            })
+            .catch(error => {
+                console.error('Error loading tags:', error);
+                catTagElement.textContent = 'Failed to load tags';
+            });
+    }
+
+    // Ensure that tag text is capitalized
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    // Load a random cat image and display its tag
+    function loadRandomCat() {
+        if (tags.length > 0) {
+            const randomTag = tags[Math.floor(Math.random() * tags.length)]; // Pick a random tag
+            const capitalizedTag = capitalizeFirstLetter(randomTag);
+            const imageUrl = `https://cataas.com/cat/${randomTag}?position=center&${new Date().getTime()}`;
+
+            catImageElement.src = imageUrl;
+            catTagElement.textContent = `"${capitalizedTag}"`; // Display the capitalized tag
+        } else {
+            catTagElement.textContent = 'No tags available';
+        }
+    }
+
+    fetchTags();
+
+    moreCatsButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        loadRandomCat();
+    });
+});
+
 // Volunteer carousel functionalities
 function initializeCarousel() {
     const carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
