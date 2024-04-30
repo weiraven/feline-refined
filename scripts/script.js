@@ -109,21 +109,23 @@ function setupDonationForm() {
     var bankInfo = document.getElementById('bank-info');
     var paypalInfo = document.getElementById('paypal-info');
 
+    function hideAllPaymentInfos() {
+        [creditInfo, bankInfo, paypalInfo].forEach(function(info) {
+            info.classList.remove('show');
+        });
+    }
+
     radios.forEach(function(radio) {
         radio.addEventListener('change', function() {
-            // Hide all payment info sections
-            creditInfo.style.display = 'none';
-            bankInfo.style.display = 'none';
-            paypalInfo.style.display = 'none';
-            
-            // Show the selected payment method's info section
+            hideAllPaymentInfos();
+
             if (this.value === 'credit') {
-                creditInfo.style.display = 'block';
+                creditInfo.classList.add('show');
             } else if (this.value === 'bank') {
-                bankInfo.style.display = 'block';
+                bankInfo.classList.add('show');
             } else if (this.value === 'paypal') {
-                paypalInfo.style.display = 'block';
+                paypalInfo.classList.add('show');
             }
         });
-    });    
+    });     
 }

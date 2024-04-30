@@ -67,7 +67,7 @@ nav img {
     cursor: pointer;
 }
 
-/* Pursue transition to Our Work effect */
+/* Explore transition to Our Work effect */
 
 .nav-item-explore {
     position: relative;
@@ -949,8 +949,17 @@ footer {
     margin-bottom: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 .payment-info {
-    margin-top: 15px;
+    display: none;
+    margin-top: 5px;
+}
+
+.payment-info.show {
+    display: block;
 }
 
 .payment-type label {
@@ -961,7 +970,7 @@ footer {
 
 .fa-brands {
     display: inline-block;
-    margin-right: 10px;
+    margin: 0px 5px 15px 0px;
     font-size: 32px;
 }
 

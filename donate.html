@@ -174,14 +174,14 @@
                                 <input type="radio" name="paymentType" value="paypal" id="paypal"/> PayPal
                             </label>
                         </div>
-                        <div class="payment-type">
+                        <div id="credit-icons">
                             <i class="fa-brands fa-cc-visa"></i>
                             <i class="fa-brands fa-cc-mastercard"></i>
                             <i class="fa-brands fa-cc-discover"></i>
                             <i class="fa-brands fa-cc-amex"></i>
                             <i class="fa-brands fa-cc-paypal"></i>
                         </div>
-                        <div id="credit-info" class="payment-info" style="display:none;">
+                        <div id="credit-info" class="payment-info hidden">
                             <!-- Credit card information fields -->
                             <div class="input-box">
                                 <span class="details">Credit Card Number</span>
@@ -195,7 +195,7 @@
                                 <input type="text" class="text" placeholder="" required>
                             </div>
                         </div>
-                        <div id="bank-info" class="payment-info" style="display:none;">
+                        <div id="bank-info" class="payment-info hidden">
                             <!-- Bank account information fields -->
                             <div class="input-box">
                                 <span class="details">Account Type</span>
@@ -218,7 +218,7 @@
                                 <input type="text" class="text" placeholder="for bank verification" required>
                             </div>
                         </div>
-                        <div id="paypal-info" class="payment-info" style="display:none;">
+                        <div id="paypal-info" class="payment-info hidden">
                             <!-- PayPal information fields -->
                             <label for="cover-paypal-fee">
                                 <input type="checkbox" id="cover-paypal-fee" name="cover-fee">
