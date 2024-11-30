@@ -2,11 +2,13 @@
 
 A mock-up website dedicated to promoting the education and adoption of adult cats. Our mission is to challenge misconceptions about adult cats and highlight the unique charm, affection, and companionship they offer to humans.
 
+**Live Website:** [Feline Refined on GitHub Pages](https://weiraven.github.io/feline-refined/)
+
 ## Table of Contents
 
 - [About](#about)
 - [Features](#features)
-- [Getting Started](#getting-started)
+- [Getting-Started](#getting-started)
 - [License](#license)
 
 ## About
@@ -23,12 +25,13 @@ Feline Refined aims to create awareness about the benefits of adopting adult cat
 
 ## Getting Started
 
-To get started with Feline Refined, simply clone this repository to your local machine and open the `index.html` file in your preferred web browser.
+To view the website, visit the live deployment here: [Feline Refined on GitHub Pages](https://weiraven.github.io/feline-refined/).
+
+To explore the codebase locally, clone this repository to your machine and open the `index.html` file in your preferred web browser:
 
 ```bash
 git clone https://github.com/weiraven/feline-refined.git
 cd feline-refined
-```
 
 ## License
 This project is licensed under the [MIT License](https://github.com/weiraven/feline-refined/blob/main/LICENSE).
