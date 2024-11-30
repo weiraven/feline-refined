@@ -32,6 +32,7 @@ To explore the codebase locally, clone this repository to your machine and open 
 ```bash
 git clone https://github.com/weiraven/feline-refined.git
 cd feline-refined
+```
 
 ## License
 This project is licensed under the [MIT License](https://github.com/weiraven/feline-refined/blob/main/LICENSE).
